@@ -1,0 +1,70 @@
+{
+  "generation": "2026-11-21",
+  "source": "Epoch AI AI data centers database (CC-BY 4.0), https://epoch.ai/data/ai-data-centers",
+  "constants": {
+    "LF": 0.9,
+    "HOURS": 8760,
+    "H_eff": 7884.0,
+    "MGD_to_m3_per_year": 1381674.65
+  },
+  "files": {
+    "data_centers_clean.csv": {
+      "rows": 96,
+      "desc": "96个AI数据中心主表",
+      "key_cols": [
+        "Name",
+        "power_MW",
+        "h100e",
+        "cost_B",
+        "h100e_per_MW",
+        "Country"
+      ],
+      "notes": "h100e_per_MW=算力密度(中位数约1137); power_MW=IT功率"
+    },
+    "timelines_clean.csv": {
+      "rows": 576,
+      "desc": "建设时间线(逐站点逐事件)",
+      "key_cols": [
+        "data_center",
+        "date",
+        "year",
+        "it_power_MW",
+        "h100e",
+        "water_MGD",
+        "water_m3_per_year",
+        "w_per_IT",
+        "status_simple"
+      ],
+      "notes": "water_MGD是现场冷却耗水; w_per_IT由此反推(仅现场,不含发电耗水); w_per_IT中位数约0.20,与UNU含发电的全口径9.84不同"
+    },
+    "chip_quantities_clean.csv": {
+      "rows": 243,
+      "desc": "芯片数量明细",
+      "key_cols": [
+        "data_center",
+        "date",
+        "chip_type",
+        "units"
+      ]
+    },
+    "chillers_clean.csv": {
+      "rows": 143,
+      "desc": "冷水机规格(冷却能力kW/占地m2)",
+      "key_cols": [
+        "Model",
+        "Manufacturer",
+        "Cooling capacity (kW)",
+        "Area (m^2)"
+      ]
+    },
+    "cooling_towers_clean.csv": {
+      "rows": 527,
+      "desc": "冷却塔规格(冷却能力kW/占地m2)",
+      "key_cols": [
+        "Model",
+        "Cooling capacity (central estimate, kW)",
+        "Area (m^2)"
+      ]
+    }
+  }
+}

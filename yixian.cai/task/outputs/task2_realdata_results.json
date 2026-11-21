@@ -1,0 +1,133 @@
+{
+  "data_sources": {
+    "carbon": "Ember via Our World in Data (owid_carbon_intensity_full.csv, CC-BY)",
+    "geo": "360-info country-centroids (country_centroids.csv)",
+    "nodes": "Epoch AI (data_centers_clean.csv, CC-BY)"
+  },
+  "parameters": {
+    "N_NODES": 10,
+    "BUDGET": 400.0,
+    "TASK_DEMAND": 300000.0,
+    "TAU_MAX": 150.0,
+    "carbon_data_year": 2024
+  },
+  "node_carbon": {
+    "Colossus 2": 383.8,
+    "DayOne Nusajaya": 600.4,
+    "Google Waltham Cross": 216.5,
+    "VNET Bayin Ulanqab": 555.4,
+    "Oracle Batam": 680.2,
+    "CoreWeave Norway": 29.7,
+    "Nebius Mantsala": 66.6,
+    "Southgate Melbourne": 553.8,
+    "Start Campus Sines Data Campus": 110.6,
+    "Nscale Keflavik": 27.8
+  },
+  "node_coordinates": {
+    "Colossus 2": [
+      45.67,
+      -112.46
+    ],
+    "DayOne Nusajaya": [
+      3.79,
+      109.72
+    ],
+    "Google Waltham Cross": [
+      52.16,
+      -3.68
+    ],
+    "VNET Bayin Ulanqab": [
+      36.57,
+      103.91
+    ],
+    "Oracle Batam": [
+      -2.23,
+      117.28
+    ],
+    "CoreWeave Norway": [
+      68.73,
+      15.35
+    ],
+    "Nebius Mantsala": [
+      64.49,
+      26.24
+    ],
+    "Southgate Melbourne": [
+      -25.74,
+      134.48
+    ],
+    "Start Campus Sines Data Campus": [
+      39.6,
+      -8.53
+    ],
+    "Nscale Keflavik": [
+      64.99,
+      -18.58
+    ]
+  },
+  "carbon_aware_model": {
+    "feasible": true,
+    "n_nodes": 9,
+    "selected": [
+      "Colossus 2",
+      "DayOne Nusajaya",
+      "Google Waltham Cross",
+      "VNET Bayin Ulanqab",
+      "CoreWeave Norway",
+      "Nebius Mantsala",
+      "Southgate Melbourne",
+      "Start Campus Sines Data Campus",
+      "Nscale Keflavik"
+    ],
+    "allocation": {
+      "Colossus 2": 45442.8,
+      "DayOne Nusajaya": 27537.2,
+      "Google Waltham Cross": 54402.3,
+      "VNET Bayin Ulanqab": 21485.6,
+      "CoreWeave Norway": 46748.1,
+      "Nebius Mantsala": 25021.3,
+      "Southgate Melbourne": 43846.8,
+      "Start Campus Sines Data Campus": 30025.5,
+      "Nscale Keflavik": 5490.4
+    },
+    "total_H100e": 299999.9996,
+    "gini": 0.3719,
+    "avg_carbon_g_per_kwh": 295.0
+  },
+  "carbon_blind_model": {
+    "feasible": true,
+    "n_nodes": 10,
+    "selected": [
+      "Colossus 2",
+      "DayOne Nusajaya",
+      "Google Waltham Cross",
+      "VNET Bayin Ulanqab",
+      "Oracle Batam",
+      "CoreWeave Norway",
+      "Nebius Mantsala",
+      "Southgate Melbourne",
+      "Start Campus Sines Data Campus",
+      "Nscale Keflavik"
+    ],
+    "allocation": {
+      "Colossus 2": 45442.8,
+      "DayOne Nusajaya": 47732.0,
+      "Google Waltham Cross": 54402.3,
+      "VNET Bayin Ulanqab": 21485.6,
+      "Oracle Batam": 41254.7,
+      "CoreWeave Norway": 24822.0,
+      "Nebius Mantsala": 23724.4,
+      "Southgate Melbourne": 22727.2,
+      "Start Campus Sines Data Campus": 15563.2,
+      "Nscale Keflavik": 2845.8
+    },
+    "total_H100e": 300000.0,
+    "gini": 0.2343,
+    "avg_carbon_g_per_kwh": 381.9
+  },
+  "single_site_benchmark": {
+    "site": "Colossus 2",
+    "carbon_g_per_kwh": 383.8
+  },
+  "note": "时延由大圆距离推算(2d/200+5ms)；碳强度为国家级2024年数据，非站点实测"
+}

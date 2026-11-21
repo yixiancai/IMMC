@@ -1,0 +1,182 @@
+{
+  "scale_distribution": {
+    "n_sites": 96,
+    "total_power_GW": 15.12,
+    "total_compute_H100e": 15768419.861403031,
+    "median_power_MW": 118.0,
+    "max_power_MW": 1037.0,
+    "max_power_site": "Anthropic-Amazon New Carlisle",
+    "median_compute_density": 1137.0
+  },
+  "water_intensity_onsite": {
+    "n_records": 15,
+    "median_m3_per_MWh": 0.195,
+    "min": 0.0011,
+    "max": 7.548,
+    "note": "现场冷却耗水反推，不含发电耗水；与UNU含发电口径9.84不同"
+  },
+  "water_power_pairs": [
+    {
+      "data_center": "AWS Berwick",
+      "it_power_MW": 77.0,
+      "water_MGD": 0.06,
+      "w_per_IT": 0.137
+    },
+    {
+      "data_center": "AWS Berwick",
+      "it_power_MW": 77.0,
+      "water_MGD": 0.129,
+      "w_per_IT": 0.294
+    },
+    {
+      "data_center": "AWS Berwick",
+      "it_power_MW": 77.0,
+      "water_MGD": 0.129,
+      "w_per_IT": 0.294
+    },
+    {
+      "data_center": "AWS Berwick",
+      "it_power_MW": 108.0,
+      "water_MGD": 0.129,
+      "w_per_IT": 0.209
+    },
+    {
+      "data_center": "AWS Berwick",
+      "it_power_MW": 169.0,
+      "water_MGD": 0.129,
+      "w_per_IT": 0.134
+    },
+    {
+      "data_center": "Anthropic-Amazon New Carlisle",
+      "it_power_MW": 1037.0,
+      "water_MGD": 21.0,
+      "w_per_IT": 3.549
+    },
+    {
+      "data_center": "Google New Albany",
+      "it_power_MW": 67.0,
+      "water_MGD": 0.845,
+      "w_per_IT": 2.21
+    },
+    {
+      "data_center": "Google New Albany",
+      "it_power_MW": 144.0,
+      "water_MGD": 0.966,
+      "w_per_IT": 1.176
+    },
+    {
+      "data_center": "Google Omaha",
+      "it_power_MW": 79.0,
+      "water_MGD": 0.088,
+      "w_per_IT": 0.195
+    },
+    {
+      "data_center": "Google Papillion",
+      "it_power_MW": 237.0,
+      "water_MGD": 0.088,
+      "w_per_IT": 0.065
+    },
+    {
+      "data_center": "Google Pryor (North)",
+      "it_power_MW": 53.0,
+      "water_MGD": 2.282739726,
+      "w_per_IT": 7.548
+    },
+    {
+      "data_center": "Google Storey County",
+      "it_power_MW": 81.0,
+      "water_MGD": 0.0005,
+      "w_per_IT": 0.001
+    },
+    {
+      "data_center": "Meta Kuna",
+      "it_power_MW": 152.0,
+      "water_MGD": 0.07,
+      "w_per_IT": 0.081
+    },
+    {
+      "data_center": "Microsoft Fairwater Wisconsin",
+      "it_power_MW": 369.0,
+      "water_MGD": 0.00771,
+      "w_per_IT": 0.004
+    },
+    {
+      "data_center": "OpenAI Stargate New Mexico",
+      "it_power_MW": 1750.0,
+      "water_MGD": 0.02,
+      "w_per_IT": 0.002
+    }
+  ],
+  "china_sites": [
+    {
+      "site": "VNET Bayin Ulanqab",
+      "power_MW": 221.0,
+      "h100e": 122789.29,
+      "cost_B": 8.37,
+      "compute_density": 555.61
+    },
+    {
+      "site": "Huawei Wuhu",
+      "power_MW": 197.0,
+      "h100e": 52830.72,
+      "cost_B": 7.46,
+      "compute_density": 268.18
+    },
+    {
+      "site": "Huawei Horinger",
+      "power_MW": 169.9,
+      "h100e": 81043.96,
+      "cost_B": 6.44,
+      "compute_density": 477.01
+    },
+    {
+      "site": "Alibaba Zhangbei",
+      "power_MW": 169.0,
+      "h100e": 31884.79,
+      "cost_B": 6.4,
+      "compute_density": 188.67
+    },
+    {
+      "site": "Envision Galaxy Ulanqab",
+      "power_MW": 118.0,
+      "h100e": 47931.28,
+      "cost_B": 4.47,
+      "compute_density": 406.2
+    }
+  ],
+  "china_summary": {
+    "n": 5,
+    "total_power_MW": 874.9,
+    "median_power_MW": 169.9
+  },
+  "site_water_examples": {
+    "Anthropic-Amazon New Carlisle": {
+      "IT_power_MW": 1037.0,
+      "water_MGD": 21.0,
+      "water_m3_per_year": 29015168.0,
+      "w_per_IT": 3.549,
+      "compute_H100e": 818428.0
+    },
+    "Google Pryor (North)": {
+      "IT_power_MW": 53.0,
+      "water_MGD": 2.282739726,
+      "water_m3_per_year": 3154004.0,
+      "w_per_IT": 7.548,
+      "compute_H100e": 636685.0
+    }
+  },
+  "water_based_upper": {
+    "300万m3": {
+      "P_MW": 1949.0,
+      "compute_H100e": 2216674.0
+    },
+    "3000万m3": {
+      "P_MW": 19492.0,
+      "compute_H100e": 22166739.0
+    },
+    "10000万m3": {
+      "P_MW": 64974.0,
+      "compute_H100e": 73889129.0
+    }
+  }
+}

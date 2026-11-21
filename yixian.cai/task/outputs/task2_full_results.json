@@ -1,0 +1,102 @@
+{
+  "data_source": "Epoch AI (用户下载数据集) → clean/data_centers_clean.csv",
+  "parameters": {
+    "N_NODES": 15,
+    "BUDGET": 400.0,
+    "TASK_DEMAND": 300000.0,
+    "LAM1": 0.5,
+    "LAM2": 1.0,
+    "LAM3": 2.0,
+    "TAU_MAX": 150.0,
+    "W_PER_IT": 9.84,
+    "H_EFF": 7884.0,
+    "note": "时延/网络能耗为假设(数据集无此字段);其余来自数据"
+  },
+  "base_model": {
+    "feasible": true,
+    "status": "Optimal",
+    "n_nodes": 8,
+    "selected": [
+      "Microsoft Fairwater Wisconsin",
+      "Google Pryor (North)",
+      "Colossus 1",
+      "Google New Albany",
+      "Google Columbus",
+      "Amazon Madison Mega Site",
+      "CoreWeave Denton TX",
+      "Bridge Data Centres MY06"
+    ],
+    "allocation": {
+      "Microsoft Fairwater Wisconsin": 46706.4,
+      "Google Pryor (North)": 66904.7,
+      "Colossus 1": 31368.1,
+      "Google New Albany": 37361.4,
+      "Google Columbus": 38293.9,
+      "Amazon Madison Mega Site": 24724.7,
+      "CoreWeave Denton TX": 29143.0,
+      "Bridge Data Centres MY06": 25497.9
+    },
+    "total_H100e": 299999.99899999995,
+    "gini": 0.018,
+    "obj_value": 172.75716079016004
+  },
+  "without_fairness": {
+    "feasible": true,
+    "status": "Optimal",
+    "n_nodes": 7,
+    "selected": [
+      "Meta Prometheus",
+      "Microsoft Fairwater Wisconsin",
+      "Google Pryor (North)",
+      "Google New Albany",
+      "Google Columbus",
+      "Amazon Madison Mega Site",
+      "CoreWeave Denton TX"
+    ],
+    "allocation": {
+      "Meta Prometheus": 44035.3,
+      "Microsoft Fairwater Wisconsin": 46706.4,
+      "Google Pryor (North)": 62797.4,
+      "Google New Albany": 37613.8,
+      "Google Columbus": 42369.8,
+      "Amazon Madison Mega Site": 29186.4,
+      "CoreWeave Denton TX": 37290.9
+    },
+    "total_H100e": 300000.001,
+    "gini": 0.1034,
+    "obj_value": 138.48998015983997
+  },
+  "without_sla": {
+    "feasible": true,
+    "status": "Optimal",
+    "n_nodes": 8,
+    "selected": [
+      "Microsoft Fairwater Wisconsin",
+      "Google Pryor (North)",
+      "Colossus 1",
+      "Google New Albany",
+      "Google Columbus",
+      "Amazon Madison Mega Site",
+      "CoreWeave Denton TX",
+      "Bridge Data Centres MY06"
+    ],
+    "allocation": {
+      "Microsoft Fairwater Wisconsin": 46706.4,
+      "Google Pryor (North)": 66904.7,
+      "Colossus 1": 31368.1,
+      "Google New Albany": 37361.4,
+      "Google Columbus": 38293.9,
+      "Amazon Madison Mega Site": 24724.7,
+      "CoreWeave Denton TX": 29143.0,
+      "Bridge Data Centres MY06": 25497.9
+    },
+    "total_H100e": 299999.99899999995,
+    "gini": 0.018,
+    "obj_value": 172.75716079016004
+  },
+  "robustness": {
+    "demand_plus20": true,
+    "budget_minus30": true
+  },
+  "data_limitations": "数据集无带宽/网速/时延/碳强度字段，网络维度按国家地理代理"
+}

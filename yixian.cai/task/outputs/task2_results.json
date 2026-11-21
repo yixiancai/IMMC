@@ -1,0 +1,139 @@
+{
+  "parameters": {
+    "N_NODES": 12,
+    "BUDGET": 400.0,
+    "TASK_DEMAND": 300000.0,
+    "W_PER_IT": 9.84,
+    "rho": 1137.2132713708913,
+    "LATENCY_MAX": 20.0
+  },
+  "candidate_nodes": [
+    {
+      "Name": "Anthropic-Amazon New Carlisle",
+      "Country": "United States",
+      "cap_H100e": 818428.4992420415,
+      "cost_B": 39.283634,
+      "water_cap_H100e": 43976.58082481389,
+      "latency_ms": 5.0
+    },
+    {
+      "Name": "Colossus 2",
+      "Country": "United States",
+      "cap_H100e": 1111672.5618999496,
+      "cost_B": 35.836372,
+      "water_cap_H100e": 43976.58082481389,
+      "latency_ms": 5.0
+    },
+    {
+      "Name": "OpenAI Stargate Abilene",
+      "Country": "United States",
+      "cap_H100e": 1018696.3112683172,
+      "cost_B": 31.214768,
+      "water_cap_H100e": 43976.58082481389,
+      "latency_ms": 5.0
+    },
+    {
+      "Name": "Microsoft Fairwater Atlanta",
+      "Country": "United States",
+      "cap_H100e": 768768.7220818596,
+      "cost_B": 24.092952,
+      "water_cap_H100e": 43976.58082481389,
+      "latency_ms": 5.0
+    },
+    {
+      "Name": "DayOne Nusajaya",
+      "Country": "Malaysia",
+      "cap_H100e": 583836.7862556847,
+      "cost_B": 17.918186,
+      "water_cap_H100e": 43976.58082481389,
+      "latency_ms": 15.0
+    },
+    {
+      "Name": "Meta Prometheus",
+      "Country": "United States",
+      "cap_H100e": 536343.0015159171,
+      "cost_B": 17.842422,
+      "water_cap_H100e": 43976.58082481389,
+      "latency_ms": 5.0
+    },
+    {
+      "Name": "DayOne Kempas",
+      "Country": "Malaysia",
+      "cap_H100e": 480638.7064173825,
+      "cost_B": 15.974523615648,
+      "water_cap_H100e": 43976.58082481389,
+      "latency_ms": 15.0
+    },
+    {
+      "Name": "Microsoft Fairwater Wisconsin",
+      "Country": "United States",
+      "cap_H100e": 445679.63617988885,
+      "cost_B": 13.978458,
+      "water_cap_H100e": 43976.58082481389,
+      "latency_ms": 5.0
+    },
+    {
+      "Name": "Google Pryor (North)",
+      "Country": "United States",
+      "cap_H100e": 636685.1945426983,
+      "cost_B": 13.940576,
+      "water_cap_H100e": 43976.58082481389,
+      "latency_ms": 5.0
+    },
+    {
+      "Name": "Colossus 1",
+      "Country": "United States",
+      "cap_H100e": 275795.85649317835,
+      "cost_B": 12.87988,
+      "water_cap_H100e": 43976.58082481389,
+      "latency_ms": 5.0
+    },
+    {
+      "Name": "Google New Albany",
+      "Country": "United States",
+      "cap_H100e": 323900.9600808489,
+      "cost_B": 12.614706,
+      "water_cap_H100e": 43976.58082481389,
+      "latency_ms": 5.0
+    },
+    {
+      "Name": "Google Columbus",
+      "Country": "United States",
+      "cap_H100e": 331985.85144012125,
+      "cost_B": 11.478246,
+      "water_cap_H100e": 43976.58082481389,
+      "latency_ms": 5.0
+    }
+  ],
+  "base_solution": {
+    "status": "Optimal",
+    "feasible": true,
+    "objective_value": 278.53413950928115,
+    "selected_nodes": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "allocation": {
+      "Meta Prometheus": 43976.6,
+      "DayOne Kempas": 43976.6,
+      "Microsoft Fairwater Wisconsin": 43976.6,
+      "Google Pryor (North)": 43976.6,
+      "Colossus 1": 36140.5,
+      "Google New Albany": 43976.6,
+      "Google Columbus": 43976.6
+    },
+    "total_allocated_H100e": 300000.001,
+    "demand_H100e": 300000.0,
+    "num_nodes": 7
+  },
+  "robustness": {
+    "demand_plus20pct": "Optimal",
+    "budget_minus30pct": "Optimal"
+  },
+  "comparison_note": "分布式 vs 集中式: 集中式单站最大1037MW; 分布式用多节点分散承载, 在缺水地区可规避单站水瓶颈, 但付出成本与网络时延"
+}
